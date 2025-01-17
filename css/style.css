@@ -24,6 +24,9 @@
     color: var(--bg-color);
 }
 
+.box{
+    overflow-x: hidden;
+}
 .dark-mode{
     --bg-color: #0b061f;
     --text-color: #fdfdfd;
@@ -151,8 +154,7 @@ section {
     align-items: center;
     justify-content: center;
     position: relative;
-/*     background: url('./groupTrip.jpg') no-repeat center center/cover; */
-/*     background: url('./images/groupTrip.jpg') no-repeat center center/cover; */
+    /* background: url('/groupTrip.jpg') no-repeat center center/cover; */
     background: url('https://res.cloudinary.com/dnf3uvf8i/image/upload/v1737134212/groupTrip_ae2uwc.jpg') no-repeat center center/cover;
     padding: 50px;
     color: #fff;
@@ -313,7 +315,8 @@ span {
 
 .portfolio .portfolio-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
     align-items: center;
     gap: 2.5rem;
 }
@@ -325,6 +328,7 @@ span {
     border-radius: 2rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
     overflow: hidden;
+    
 }
 
 .portfolio-box img {
@@ -517,7 +521,7 @@ span {
     #darkMode-icon {
         position: absolute;
         right: 7rem;
-        font-size: 2.6rem;
+        font-size: 1.6rem;
         color: var(--text-color);
         margin-bottom: .1rem;
     } 
@@ -530,7 +534,6 @@ span {
 
     .header p{
         font-size: 1.4rem;
-        margin-right: 1.5rem;
     }
     
 
@@ -609,11 +612,15 @@ span {
 }
 
 @media (max-width: 315px) {
-    /* .home-content h1 {
+    .home-content h1 {
         font-size: 4.5rem;
-    } */
+    }
     .map-area {
         height: 20vh;
     }
 }
+
+
+
+/* ========================= */
 
