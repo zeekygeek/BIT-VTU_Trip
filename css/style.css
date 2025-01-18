@@ -652,18 +652,6 @@ span {
     padding: 0; /* Remove unnecessary padding */
   }
 
-  /* .home-content h3 {
-        font-size: 2.6rem;
-    }
-
-    .home-content h1 {
-        font-size: 5rem;
-    }
-
-    .home-content .social-media a {
-        margin: 2.5rem .75rem 3rem;
-    } */
-
   .about {
     flex-direction: column-reverse;
     text-align: center;
@@ -699,6 +687,11 @@ span {
     text-align: center;
     margin-top: 2rem;
   }
+
+  .timelineparent{
+    margin: auto;
+  }
+
 }
 
 @media (max-width: 365px) {
@@ -709,6 +702,10 @@ span {
   .map-area {
     height: 20vh;
   }
+
+  .timelineparent{
+    margin: auto;
+  }
 }
 
 @media (max-width: 315px) {
@@ -717,6 +714,10 @@ span {
   }
   .map-area {
     height: 20vh;
+  }
+
+  .timelineparent{
+    margin: auto;
   }
 }
 
