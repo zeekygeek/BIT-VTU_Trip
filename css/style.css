@@ -497,6 +497,8 @@ span {
   float: left;
   width: 200px;
   margin: 10px 30px 10px 30px;
+  border: 2px solid white;
+  border-radius: 0.8rem;
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)"; /* IE 8 */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF); /* IE 6 & 7 */
   zoom: 1;
