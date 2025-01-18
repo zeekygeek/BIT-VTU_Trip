@@ -296,9 +296,14 @@ span {
   margin: 2rem 0 3rem;
 }
 
+#about2{
+    flex-direction: row-reverse;
+}
+
 .portfolio {
   min-height: auto;
   padding-bottom: 10rem;
+  
 }
 
 .portfolio h2 {
@@ -469,13 +474,21 @@ span {
   overflow: hidden;
   float: left;
 }
+
 #issues li {
-  max-width: 300px;
-  width: 400px;
-  height: 600px;
-  list-style: none;
-  text-align: center;
-}
+    display: flex;
+    flex-direction: column; /* Ensure content inside li is stacked */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    text-align: center;
+    width: 80%; /* Adjust width as needed */
+    margin: 1rem auto; /* Add some spacing between items */
+    max-width: 300px;
+    width: 400px;
+    height: 600px;
+    list-style: none;
+    text-align: center;
+  }
 
 #issues li img {
   float: left;
@@ -657,6 +670,10 @@ span {
     text-align: center;
   }
 
+  #about2{
+    flex-direction: column-reverse;
+  }
+
   .about-content h2 {
     text-align: center;
   }
@@ -684,7 +701,7 @@ span {
 
   .footer p {
     text-align: center;
-    margin-top: 2rem;
+    flex-direction: row;
   }
 
   .timelineparent{
