@@ -85,23 +85,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const datesLinks = document.querySelectorAll('#dates a');
     const issuesItems = document.querySelectorAll('#issues li');
   
-    // Function to handle the active state
     datesLinks.forEach(link => {
-      link.addEventListener('click', function (e) {
-        e.preventDefault(); // Prevent default anchor behavior
-  
-        // Remove active class from all links
-        datesLinks.forEach(link => link.classList.remove('active'));
-        // Add active class to the clicked link
-        this.classList.add('active');
-  
-        // Get the target issue ID from href
-        const targetId = this.getAttribute('href').substring(1);
-  
-        // Remove selected class from all issues
-        issuesItems.forEach(issue => issue.classList.remove('selected'));
-        // Add selected class to the target issue
-        document.getElementById(targetId).classList.add('selected');
+        link.addEventListener('click', function (e) {
+          e.preventDefault(); // Prevent default anchor behavior
+      
+          // Remove active class from all links
+          datesLinks.forEach(link => link.classList.remove('active'));
+          this.classList.add('active');
+      
+          // Get the target issue ID from href
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+      
+          // Remove selected class from all issues
+          issuesItems.forEach(issue => issue.classList.remove('selected'));
+          targetElement.classList.add('selected');
+      
+          // Scroll to the target element smoothly
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      
+          // Update the URL hash without jumping
+          history.pushState(null, null, `#${targetId}`);
+        });
       });
-    });
+      
+      
   });
