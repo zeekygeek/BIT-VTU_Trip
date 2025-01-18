@@ -389,6 +389,7 @@ span {
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 7%;
+    gap: 4rem;
     background: rgba(69, 135, 43, 1.0);
     background: linear-gradient(180deg, rgba(69, 135, 43, 1.0), rgba(1, 1, 1, 1.0));
 }
@@ -595,4 +596,3 @@ span {
 
 
 /* ========================= */
-
