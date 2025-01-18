@@ -382,46 +382,49 @@ span {
   color: #333;
 }
 
+/* footer */
+
 .footer {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 2rem 7%;
-  background: rgba(69, 135, 43, 1);
-  background: linear-gradient(180deg, rgba(69, 135, 43, 1), rgba(1, 1, 1, 1));
-}
-
-.footer-text p {
-  font-size: 1.6rem;
-  color: var(--white-color);
-}
-.footer-text br {
-  margin-top: 50px;
-}
-
-.footer-iconTop a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.8rem;
-  background: var(--white-color);
-  border-radius: 0.8rem;
-  border: 0.2rem solid var(--main-color);
-  outline: 0.2rem solid transparent;
-  transition: 0.5s ease;
-}
-
-.footer-iconTop a:hover {
-  outline-color: var(--white-color);
-  text-decoration: none;
-}
-
-.footer-iconTop a i {
-  font-size: 2.4rem;
-  color: #333;
-}
+    background: linear-gradient(rgba(0, 0, 0, 0.348), rgba(13, 83, 2, 0.758));
+    display: flex;
+    margin-top: 80px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: wrap;
+    padding: 2rem 9%;
+    border-top: 2px solid rgb(26, 53, 0);
+  }
+  
+  .footer .text p {
+    display: flex;
+    text-align: center;
+    font-size: 1.6rem;
+    flex-wrap: wrap;
+  }
+  
+  .footer p span {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+  }
+  
+  .footerup a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #c3cec3;
+    padding: 0.8rem;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  
+  .footerup i {
+    font-size: 2.4rem;
+    color: #111;
+    text-align: center;
+  }
+  
 
 /*additional styles*/
 
@@ -493,7 +496,7 @@ span {
 #issues li img {
   float: left;
   width: 200px;
-  margin: 10px 30px 10px 50px;
+  margin: 10px 30px 10px 30px;
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)"; /* IE 8 */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF); /* IE 6 & 7 */
   zoom: 1;
@@ -502,11 +505,11 @@ span {
   -o-transition: all 2s ease-in-out;
   -ms-transition: all 2s ease-in-out;
   transition: all 2s ease-in-out;
-  -webkit-transform: scale(0.7, 0.7);
-  -moz-transform: scale(0.7, 0.7);
-  -o-transform: scale(0.7, 0.7);
-  -ms-transform: scale(0.7, 0.7);
-  transform: scale(0.7, 0.7);
+  -webkit-transform: scale(1.1, 1.1);
+  -moz-transform: scale(1.1, 1.1);
+  -o-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
 }
 #issues li h1 {
   color: #ffcc00;
@@ -622,6 +625,10 @@ span {
   .home-img img {
     display: none;
   }
+
+  .footer {
+    padding: 2rem 3%;
+  }
 }
 
 @media (max-width: 879px) {
@@ -695,15 +702,6 @@ span {
     font-size: 50%;
   }
 
-  .footer {
-    justify-content: center;
-  }
-
-  .footer p {
-    text-align: center;
-    flex-direction: row;
-  }
-
   .timelineparent{
     margin: auto;
   }
@@ -722,6 +720,15 @@ span {
   .timelineparent{
     margin: auto;
   }
+
+  .footer {
+    flex-direction: column-reverse;
+  }
+
+  .footerup a {
+    margin-bottom: 10px;
+  }
+
 }
 
 @media (max-width: 315px) {
