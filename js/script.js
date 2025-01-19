@@ -44,25 +44,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     /*========== dark light mode ==========*/
+    // let darkModeIcon = document.querySelector('#darkMode-icon');
+    // let logoText = document.querySelector('.logo p');
+    
+    // // Set default to dark mode
+    // document.body.classList.add('dark-mode');
+    // darkModeIcon.classList.add('bx-sun'); // Add sun icon
+    // logoText.style.color = 'white'; // Set text color for dark mode
+    
+    // darkModeIcon.onclick = () => {
+    //     darkModeIcon.classList.toggle('bx-sun');
+    //     document.body.classList.toggle('dark-mode');
+    //     if(document.body.classList.contains('dark-mode')) {
+    //         logoText.style.color = 'white';
+
+    //     }
+    //     else {
+    //         logoText.style.color = '';
+    //     }
+    // };
+    
+
     let darkModeIcon = document.querySelector('#darkMode-icon');
-    let logoText = document.querySelector('.logo p');
-    
-    // Set default to dark mode
-    document.body.classList.add('dark-mode');
-    darkModeIcon.classList.add('bx-sun'); // Add sun icon
-    logoText.style.color = 'white'; // Set text color for dark mode
-    
-    darkModeIcon.onclick = () => {
-        darkModeIcon.classList.toggle('bx-sun');
-        document.body.classList.toggle('dark-mode');
-        if(document.body.classList.contains('dark-mode')) {
-            logoText.style.color = 'white';
-        }
-        else {
-            logoText.style.color = '';
-        }
-    };
-    
+let logoText = document.querySelector('.logo p');
+
+// Set default to dark mode
+document.body.classList.add('dark-mode');
+darkModeIcon.classList.add('bx-sun'); // Add sun icon
+logoText.style.color = 'white'; // Set text color for dark mode
+
+darkModeIcon.onclick = () => {
+    // Toggle both dark mode and light mode
+    darkModeIcon.classList.toggle('bx-sun');
+    document.body.classList.toggle('dark-mode');
+    document.body.classList.toggle('light-mode'); // Add light mode class
+
+    // Update logo text color based on mode
+    if (document.body.classList.contains('dark-mode')) {
+        logoText.style.color = 'white'; // Dark mode text color
+    } else {
+        logoText.style.color = ''; // Light mode text color (or any other color you prefer)
+    }
+};
+
+
     /*========== scroll reveal ==========*/
     ScrollReveal({
         // reset: true,
