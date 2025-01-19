@@ -530,7 +530,6 @@ span {
     width: 80%; /* Adjust width as needed */
     margin: 1rem auto; /* Add some spacing between items */
     max-width: 300px;
-    width: 400px;
     height: 600px;
     list-style: none;
     text-align: center;
