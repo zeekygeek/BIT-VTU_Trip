@@ -537,7 +537,7 @@ span {
     text-align: center;
   }
 
-#issues li img {
+/* #issues li img {
   float: left;
   width: 200px;
   margin: 10px 30px 10px 30px;
@@ -555,6 +555,30 @@ span {
   -ms-transform: scale(1.1, 1.1);
   transform: scale(1.1, 1.1);
 }
+ */
+
+/* =========================== */
+#issues li img {
+  float: left;
+  width: 100%; /* Make the image responsive */
+  max-width: 200px; /* Limit the width to 200px */
+  margin: 10px 30px 10px 30px;
+  border: 2px solid white;
+  border-radius: 0.8rem;
+  zoom: 1;
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  -ms-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+  -webkit-transform: scale(1.1, 1.1);
+  -moz-transform: scale(1.1, 1.1);
+  -o-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+}
+/* =============================== */
+
 #issues li h1 {
   color: #ffcc00;
   font-size: 48px;
