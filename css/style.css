@@ -298,9 +298,23 @@ span {
 
 #about2{
     flex-direction: row-reverse;
-    min-height: auto;
 }
 
+#about4{
+  flex-direction: row-reverse;
+}
+
+#outcomes .heading{
+  text-align: center;
+}
+#outcomes p{
+  text-align: center;
+}
+
+#outcomes{
+  margin-top: -10vh;
+  margin-bottom: -10vh;
+};
 
 .portfolio {
   min-height: auto;
@@ -730,6 +744,10 @@ span {
     text-align: center;
   }
 
+  #objheading span{
+    display: block;
+  }
+
   .header p {
     font-size: 1.4rem;
     margin: 0; /* Ensure no extra space from default margins */
@@ -767,6 +785,15 @@ span {
   #about2{
     flex-direction: column;
   }
+
+  #about4{
+    flex-direction: column;
+  }
+
+  #outcomes{
+    margin-top: -25vh;
+    margin-bottom: -15vh;
+  };
 
 }
 
