@@ -301,6 +301,7 @@ span {
     min-height: auto;
 }
 
+
 .portfolio {
   min-height: auto;
   padding-bottom: 10rem;
@@ -330,6 +331,7 @@ span {
 .portfolio-box img {
   width: 100%;
   object-fit: contain;
+  /* object-fit: cover; */
   transition: 0.5s ease;
 }
 .portfolio-box:hover img {
@@ -413,7 +415,7 @@ span {
     text-decoration: none;
     color: #44cd16;
   }
-
+  
   .footerup a {
     display: inline-flex;
     justify-content: center;
@@ -557,10 +559,9 @@ span {
   -o-transform: scale(1.1, 1.1);
   -ms-transform: scale(1.1, 1.1);
   transform: scale(1.1, 1.1);
-}
- */
+} */
 
-/* =========================== */
+
 #issues li img {
   float: left;
   width: 100%; /* Make the image responsive */
@@ -580,7 +581,7 @@ span {
   -ms-transform: scale(1.1, 1.1);
   transform: scale(1.1, 1.1);
 }
-/* =============================== */
+
 
 #issues li h1 {
   color: #ffcc00;
@@ -659,6 +660,7 @@ span {
     right: -60px;
     max-width: 45vw;
   }
+  
 }
 
 @media (min-width: 1200px) {
@@ -666,7 +668,11 @@ span {
     right: -60px;
     max-width: 45vw;
   }
+  #about3img{
+    scale: .7;
+  }
 }
+
 
 @media (max-width: 1100px) {
   .home-img img {
@@ -761,6 +767,7 @@ span {
   #about2{
     flex-direction: column;
   }
+
 }
 
 @media (max-width: 580px) {
