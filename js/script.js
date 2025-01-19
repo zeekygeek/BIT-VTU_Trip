@@ -85,6 +85,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const datesLinks = document.querySelectorAll('#dates a');
     const issuesItems = document.querySelectorAll('#issues li');
   
+    // datesLinks.forEach(link => {
+    //     link.addEventListener('click', function (e) {
+    //       e.preventDefault(); // Prevent default anchor behavior
+      
+    //       // Remove active class from all links
+    //       datesLinks.forEach(link => link.classList.remove('active'));
+    //       this.classList.add('active');
+      
+    //       // Get the target issue ID from href
+    //       const targetId = this.getAttribute('href').substring(1);
+    //       const targetElement = document.getElementById(targetId);
+      
+    //       // Remove selected class from all issues
+    //       issuesItems.forEach(issue => issue.classList.remove('selected'));
+    //       targetElement.classList.add('selected');
+      
+    //       // Scroll to the target element smoothly
+    //       targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      
+    //       // Update the URL hash without jumping
+    //       history.pushState(null, null, `#${targetId}`);
+    //     });
+    //   });
+      
+
     datesLinks.forEach(link => {
         link.addEventListener('click', function (e) {
           e.preventDefault(); // Prevent default anchor behavior
@@ -109,5 +134,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
       
+      // Select the first link and issue by default
+      if (datesLinks.length > 0 && issuesItems.length > 0) {
+        datesLinks[0].classList.add('active');
+        const firstIssueId = datesLinks[0].getAttribute('href').substring(1);
+        document.getElementById(firstIssueId)?.classList.add('selected');
+      }
       
   });
+
+
+  const targetRect = targetElement.getBoundingClientRect();
+const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+window.scrollTo({
+  top: scrollTop + targetRect.top,
+  behavior: 'smooth',
+});
+
+
+///////////////////////////////////////////////////
