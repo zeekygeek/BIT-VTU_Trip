@@ -442,15 +442,18 @@ span {
   background: url("http://www.csslab.cl/ejemplos/timelinr/latest/images/dot.gif")
     3px top repeat-y;
 }
+
 #dates {
   width: 100px;
   height: 600px;
   float: left;
 }
+
 .main-dates {
   display: flex;
   justify-content: center;
 }
+
 #dates li {
   list-style: none;
   width: 100px;
@@ -461,15 +464,18 @@ span {
   background: url("http://www.csslab.cl/ejemplos/timelinr/latest/images/biggerdot.png")
     left center no-repeat;
 }
+
 #dates a {
   line-height: 38px;
   padding-bottom: 10px;
   color: #53a338;
   text-decoration: none;
+  transition: color 0.3s ease; /* Add a smooth transition */
 }
 
 #dates a.active {
-  color: #ffcc00;
+  color: #ffcc00; /* Highlight active link */
+  font-weight: bold; /* Optional for emphasis */
 }
 
 #issues {
@@ -478,6 +484,43 @@ span {
   overflow: hidden;
   float: left;
 }
+
+/* ======================= */
+/* Default colors for dark mode */
+#dates a {
+  line-height: 38px;
+  padding-bottom: 10px;
+  color: #53a338; /* Dark mode color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#dates a.active {
+  color: #ffcc00; /* Active link color for dark mode */
+  font-weight: bold;
+}
+
+/* Light mode colors */
+.light-mode #dates a {
+  color: #387326; /* Deeper green for light mode */
+}
+
+.light-mode #dates a.active {
+  color: #ffbf00; /* Deeper yellow for active link in light mode */
+  text-shadow: 
+    -1px -1px 0px black,  
+    1px -1px 0px black,  
+    -1px 1px 0px black,  
+    1px 1px 0px black; /* Creates a clean text outline effect */
+    letter-spacing: 2px;
+}
+
+
+.light-mode #issues li img {
+  border: 2px solid black; /* Change border to black in light mode */
+}
+
+/* ======================= */
 
 #issues li {
     display: flex;
@@ -500,8 +543,6 @@ span {
   margin: 10px 30px 10px 30px;
   border: 2px solid white;
   border-radius: 0.8rem;
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)"; /* IE 8 */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF); /* IE 6 & 7 */
   zoom: 1;
   -webkit-transition: all 2s ease-in-out;
   -moz-transition: all 2s ease-in-out;
@@ -527,6 +568,7 @@ span {
   line-height: 22px;
   text-shadow: #000 1px 1px 2px;
 }
+
 
 /* #grad_top,
     #grad_bottom {
@@ -754,27 +796,3 @@ span {
 /* ========================= */
 
 
-#dates li {
-    list-style: none;
-    width: 100px;
-    height: 100px;
-    line-height: 100px;
-    font-size: 24px;
-    padding-left: 10px;
-    background: url("http://www.csslab.cl/ejemplos/timelinr/latest/images/biggerdot.png")
-      left center no-repeat;
-  }
-  
-  #dates a {
-    line-height: 38px;
-    padding-bottom: 10px;
-    color: #53a338;
-    text-decoration: none;
-    transition: color 0.3s ease; /* Add a smooth transition */
-  }
-  
-  #dates a.active {
-    color: #ffcc00; /* Highlight active link */
-    font-weight: bold; /* Optional for emphasis */
-  }
-  
