@@ -334,6 +334,12 @@ span {
   gap: 2.5rem;
 }
 
+.portfolio h3{
+  text-align: center;
+  font-weight: 100;
+  padding-bottom: 2rem;
+}
+
 .portfolio-container .portfolio-box {
   position: relative;
   display: flex;
